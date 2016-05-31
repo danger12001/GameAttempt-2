@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <title>
+        FROM DARKNESS
+    </title>
+
+</head>
+
+<body>
+    <nav id="navBar">
+        <div class="nav-wrapper grey darken-3">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a id="home" onClick=""><i class="material-icons">home</i></a></li>
+                <li><a id="Char"><i class="material-icons">store</i></a></li>
+                <li><a id="Inv" onClick=""><i class="material-icons">shopping_cart</i></a></li>
+                <li><a id="log"><i class="material-icons">chat</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="main-container">
+      <div id="characterSelect" class="row screen">
+<form id="characterCreate">
+Please enter you characters name:
+<input id="characterName" type="text">
+Select a race:
+<select id="race" class="browser-default">
+  <option value="" disabled selected>Choose your option</option>
+  <option value="1">Human: +7 INT, +5 CFT</option>
+  <option value="2">Orc: +10 Health, -2 INT</option>
+  <option value="3">Elf: +10 Archery, +1 INT, +1 CFT</option>
+  <option value="3">Forest Child: +20 INT, +2 Nature Magic</option>
+</select>
+<p>Note: This game adjusts to your choices throughout playing, thus your character shall develop as you play. However, your fate is not entirely in your hands!</p>
+<div id="submit" class="btn">Continue</div>
+</form>
+
+      </div>
+
+        <!-- screens -->
+        <div id="character" class="row screen">
+            <div id="equiptment" class="col s8">
+
+            </div>
+            <div id="charStats" class="col s4">
+              <div id="charName"></div>
+              <div id="charLvl"></div>
+              <div id="charLvlProgress"></div>
+              <div id="charArmor"></div>
+              <div id="charSword"></div>
+
+            </div>
+        </div>
+        <div id="inventory" class="row screen">
+        </div>
+        <div id="crafting" class="row screen"></div>
+
+        <div id="dialogueBox">
+            <div id="DpersonPic"><img src="images/character/Icon.1_06.png" class="dialogueImg"></div>
+            <div id="DpersonName">Example Name Of Length that is hard to remember</div>
+            <div id="dialContent">test dialogue must actually be a long paragraph of text for the player to read and for mr.developer to see if his dialogue box works so he is just aimlessly typing away at this point.</div>
+        </div>
+    </div>
+    <footer id="footer" class="page-footer grey darken-3">
+        <div class="container">
+            <div class="row">
+
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script>
+    var gameContainer = document.getElementById("main-container");
+    var screenH = window.innerHeight;
+    var screenW = window.innerWidth;
+    var navH = $("#navBar").height();
+    var footerH = $("#footer").height();
+    var gameH = screenH - (navH + footerH);
+
+    gameContainer.style.height = gameH + "px";
+</script>
+
+</html>

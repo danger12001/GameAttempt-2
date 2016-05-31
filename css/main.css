@@ -1,0 +1,61 @@
+#main-container {
+  margin: 0px;
+  padding: 0px;
+}
+#footer {
+  margin-top: 0px;
+}
+#dialogueBox {
+  height: 30%;
+  width: 100%;
+  border: 5px solid black;
+   position:fixed;
+   bottom:0;
+   background: url("../images/backgrounds/hrt-stone-texture-7.jpg");
+   display: none;
+}
+#dialContent{
+  position:relative;
+height: 100;
+width: 80%;
+font-size: 32px;
+color: white;
+text-align: center;
+/*border: 5px solid brown;*/
+}
+#Dbar {
+  height: auto;
+  border: 1px solid white;
+}
+#DpersonName {
+  color: white;
+}
+.dialogueImg {
+  height: 100px;
+  width: 100px;
+  border: 1px solid white;
+}
+.screen {
+  height: 100%;
+  width: 100%;
+}
+#character {
+  display: none;
+}
+#equiptment {
+  height: 100%;
+  border: 5px solid black;
+  border-radius: 10px;
+
+}
+#charStats {
+  height: 100%;
+
+}
+#inventory {
+  display: none;
+}
+
+#crafting {
+  display: none;
+}
