@@ -15,21 +15,22 @@
 <body>
     <nav id="navBar">
         <div class="nav-wrapper grey darken-3">
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <ul id="nav-mobile" class="right">
                 <li><a id="home" onClick=""><i class="material-icons">home</i></a></li>
                 <li><a id="Char"><i class="material-icons">store</i></a></li>
                 <li><a id="Inv" onClick=""><i class="material-icons">shopping_cart</i></a></li>
                 <li><a id="log"><i class="material-icons">chat</i></a></li>
             </ul>
+
         </div>
     </nav>
     <div id="main-container">
       <div id="characterSelect" class="row screen">
 <form id="characterCreate">
 Please enter you characters name:
-<input id="characterName" type="text">
+<input id="characterName" type="text" required>
 Select a race:
-<select id="race" class="browser-default">
+<select id="race" class="browser-default" required>
   <option value="" disabled selected>Choose your option</option>
   <option value="1">Human: +7 INT, +5 CFT</option>
   <option value="2">Orc: +10 Health, -2 INT</option>
@@ -37,7 +38,7 @@ Select a race:
   <option value="3">Forest Child: +20 INT, +2 Nature Magic</option>
 </select>
 <p>Note: This game adjusts to your choices throughout playing, thus your character shall develop as you play. However, your fate is not entirely in your hands!</p>
-<div id="submit" class="btn">Continue</div>
+<div id="submit" class="btn col s12">Continue</div>
 </form>
 
       </div>
@@ -48,11 +49,12 @@ Select a race:
 
             </div>
             <div id="charStats" class="col s4">
-              <div id="charName"></div>
-              <div id="charLvl"></div>
+              Character Name: <div id="charName"></div>
+              Character Race: <div id="charRace"></div>
+              Character Level: <div id="charLvl"></div>
               <div id="charLvlProgress"></div>
-              <div id="charArmor"></div>
-              <div id="charSword"></div>
+              Character Armor Rating: <div id="charArmor"></div>
+              Swords Skill Level: <div id="charSword"></div>
 
             </div>
         </div>
@@ -69,12 +71,22 @@ Select a race:
     <footer id="footer" class="page-footer grey darken-3">
         <div class="container">
             <div class="row">
+              <ul id="navStats" class="left col s12 center">
+                <li><div class="progress">
+      <div id="expBar" class="determinate" ></div>
+  </div></li>
+                  <li><div id="charlvlNav" ></div></li>
+                  <li><div id="charLvlProgressNav"></div></li>
+              </ul>
 
             </div>
 
         </div>
     </footer>
 </body>
+<script src="js/characterCreate.js"></script>
+<script src="js/charStats.js"></script>
+<script src="js/exp.js"></script>
 <script>
     var gameContainer = document.getElementById("main-container");
     var screenH = window.innerHeight;

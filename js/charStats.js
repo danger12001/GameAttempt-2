@@ -1,0 +1,21 @@
+var health = 75;
+var mana = 50;
+var charlvl = 1;
+var exp = 0;
+var levelThreshold = 25;
+var skillPoints = 0;
+var attack = 0;
+var armor = 0;
+var INT = 5;
+var STR = 5;
+var DEX = 5;
+var CFT = 5;
+var Archery = 0;
+var Swords = 0;
+var Axes = 0;
+var Hammers = 0;
+
+var lvl = document.getElementById("charlvlNav");
+lvl.innerHTML = "Level: " + charlvl;
+var progress = document.getElementById("charLvlProgressNav");
+progress.innerHTML = exp + "/" + levelThreshold;
