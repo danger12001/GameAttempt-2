@@ -1,4 +1,5 @@
 var view = document.getElementById("characterSelect");
+var battle = document.getElementById("battle");
 var character = document.getElementById("character");
 var nameInput = document.getElementById("characterName");
 var race = document.getElementById("race");
@@ -6,7 +7,7 @@ var charName = document.getElementById("charName");
 var charRace = document.getElementById("charRace");
 
   $("#submit").click(function(){
-    if(nameInput.value !== "" || race.value !== ""){
+    if(nameInput.value !== "" && race.value !== ""){
   charName.innerHTML = nameInput.value;
 
   if(race.value == 1){
@@ -30,15 +31,11 @@ var charRace = document.getElementById("charRace");
     INT += 20;
   }
 view.style.display = "none";
-character.style.display = "block";
+battle.style.display = "block";
+charLevel.innerHTML = charlvl;
 }
-else if (race.value === "" && nameInput.value === ""){
-  alert("You need to choose a race and a name!");
-}
-else if (race.value === ""){
-  alert("You need to choose a race!");
-}
-else if(nameInput.value === ""|| nameInput.value === NULL){
-  alert("You need to choose a name!");
-}
+
+// else if (race.value === "" && nameInput.value !== ""){
+//   alert("You need to choose a race!");
+// }
 });

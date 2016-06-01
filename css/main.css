@@ -6,6 +6,23 @@
   margin-top: 0px;
   /*margin-left: 0px;*/
 }
+.enemy {
+  height: 150px;
+  width: 30%;
+  display: block;
+  display: inline-block;
+      vertical-align: middle;
+  /*z-index: 10;*/
+  border: none;
+}
+#enemyHealthBar {
+  background-color: red;
+}
+#imgHolder {
+  display: inline-block;
+      vertical-align: middle;
+      border: none;
+}
 #dialogueBox {
   height: 30%;
   width: 100%;
@@ -56,6 +73,51 @@ text-align: center;
   /*padding-left: 0px;*/
   color: white;;
 }
+#battle {
+  display: none;
+}
+.invBlock {
+  height: 95px;
+  border: 1px solid black;
+  width: 90%;
+}
+#container {
+  /*border: 1px solid black;*/
+  height: 98%;
+
+  width: 100%;
+}
+#fightScene {
+  /*border: 1px solid green;*/
+  height: 100%;
+  display: inline-block;
+  width: 50%;
+  background: url("../images/backgrounds/2DRP_CCArt_Background_Forest_closeup.png");
+
+}
+.stat {
+  font-size: 15px;
+  color: grey;
+}
+#controller {
+  /*border: 1px solid red;*/
+  height: 100%;
+  display: inline-block;
+  width: 25%;
+  background-color: black;
+}
+#logs li{
+  border-bottom: 1px solid black;
+  color: white;
+}
+#log {
+  /*border: 1px solid blue;*/
+  height: 100%;
+  width: 25%;
+  display: inline-block;
+  background-color: black;
+}
+
 #equiptment {
   height: 100%;
   border: 5px solid black;

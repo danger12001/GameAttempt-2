@@ -1,5 +1,4 @@
 var expBar = document.getElementById("expBar");
-var charLevel = document.getElementById("charLvl");
   progress.innerHTML = exp + "/" + levelThreshold;
   if(exp >= levelThreshold){
     exp = 0;
