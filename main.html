@@ -146,12 +146,12 @@
 
     <div id="battle" class="row screen">
       <div id="container" class="col s12">
-      <div id="log" class="col s3">
-<ul id="logs" style="overflow-y: auto">
+      <div id="log" class="col s3" style="overflow-y: auto">
+<ul id="logs" >
 </ul>
       </div>
       <div id="fightScene" class="col s3">
-          <div class="progress col s12">
+          <div id="ehb" class="progress col s12">
             <div id="enemyHealthBar" class="determinate"></div>
         </div>
         <div id="enemyName" class="col s6"></div>
@@ -178,6 +178,11 @@
         <ul id="navStats" class="left col s12 center">
           <li>
             <div class="progress">
+              <div id="healthBar" class="determinate"></div>
+            </div>
+          </li>
+          <li>
+            <div class="progress">
               <div id="expBar" class="determinate"></div>
             </div>
           </li>
@@ -196,7 +201,7 @@
 </body>
 <script src="js/charStats.js"></script>
 <script src="js/characterCreate.js"></script>
-<script src="js/exp.js"></script>
+<!-- <script src="js/exp.js"></script> -->
 <script src="js/combat.js"></script>
 <script>
   var gameContainer = document.getElementById("main-container");
@@ -211,7 +216,7 @@
 <script>
 var crafting = document.getElementById('crafting');
   $("#Char").click(function() {
-    if (inventory.style.display == "block") {
+    if (battle.style.display == "block") {
       character.style.display = "block";
       inventory.style.display = "none";
       battle.style.display = "none";
@@ -220,13 +225,13 @@ var crafting = document.getElementById('crafting');
       character.style.display = "block";
       crafting.style.display = "none";
       battle.style.display = "none";
-      crafting.style.display = "none";
+      inventory.style.display = "none";
     }
     else if (battle.style.display == "block") {
-      character.style.display = "block";
-      battle.style.display = "none";
       inventory.style.display = "none";
+      character.style.display = "block";
       crafting.style.display = "none";
+      battle.style.display = "none";
     }
   });
   $("#Inv").click(function() {
@@ -266,6 +271,7 @@ var crafting = document.getElementById('crafting');
       battle.style.display = "block";
       character.style.display = "none";
     }
+
   });
   $("#Shop").click(function() {
     if (character.style.display == "block") {

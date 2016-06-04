@@ -1,5 +1,6 @@
 var expBar = document.getElementById("expBar");
   progress.innerHTML = exp + "/" + levelThreshold;
+
   if(exp >= levelThreshold){
     exp = 0;
     levelThreshold += 25;

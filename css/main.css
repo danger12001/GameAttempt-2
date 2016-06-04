@@ -7,21 +7,32 @@
   /*margin-left: 0px;*/
 }
 .enemy {
-  height: 150px;
-  width: 30%;
-  display: block;
+  margin-top: 25%;
+  /*height: 150px;*/
+  /*width: 30%;*/
+  /*display: block;*/
   display: inline-block;
-      vertical-align: middle;
+      /*vertical-align: middle;*/
   /*z-index: 10;*/
-  border: none;
+  /*border: none;*/
+}
+#healthBar {
+  background-color: red;
+  
 }
 #enemyHealthBar {
   background-color: red;
+  height: 50px;
+}
+#ehb {
+  height: 25px;
 }
 #imgHolder {
   display: inline-block;
       vertical-align: middle;
       border: none;
+      /*position: absolute;*/
+      z-index: 2;
 }
 #dialogueBox {
   height: 30%;
@@ -87,11 +98,20 @@ text-align: center;
 
   width: 100%;
 }
+#enemyName {
+  background-color: white;
+}
+#enemyLvl {
+  background-color: white;
+}
+
 #fightScene {
   /*border: 1px solid green;*/
   height: 100%;
   display: inline-block;
   width: 50%;
+  color: black;
+  font-size: 19px;
   background: url("../images/backgrounds/2DRP_CCArt_Background_Forest_closeup.png");
 
 }
@@ -106,7 +126,7 @@ text-align: center;
   width: 25%;
   background-color: black;
 }
-#logs li{
+#logs{
   border-bottom: 1px solid black;
   color: white;
 }

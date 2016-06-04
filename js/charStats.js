@@ -1,4 +1,6 @@
+
 var health = 75;
+var maxHealth = 75;
 var mana = 50;
 var charlvl = 1;
 var exp = 0;
@@ -16,6 +18,8 @@ var Swords = 0;
 var Axes = 0;
 var Hammers = 0;
 
+var healthBar = document.getElementById("healthBar");
+healthBar.style.width = (health/maxHealth) * 100 + "%";
 var lvl = document.getElementById("charlvlNav");
 lvl.innerHTML = "Level: " + charlvl;
 var progress = document.getElementById("charLvlProgressNav");
@@ -30,3 +34,6 @@ var charSword = document.getElementById('charSword');
 charSword.innerHTML = Swords;
 var Gold = document.getElementById('gold');
 Gold.innerHTML = "Gold: " + gold;
+
+// var expBar = document.getElementById("expBar");
+// progress.innerHTML = exp + "/" + levelThreshold;
