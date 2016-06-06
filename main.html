@@ -2,100 +2,296 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <link href="css/main.css" type="text/css" rel="stylesheet">
-    <title>
-        FROM DARKNESS
-    </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link href="css/main.css" type="text/css" rel="stylesheet">
+  <title>
+    FROM DARKNESS
+  </title>
 
 </head>
 
 <body>
-    <nav id="navBar">
-        <div class="nav-wrapper grey darken-3">
-            <ul id="nav-mobile" class="right">
-                <li><a id="home" onClick=""><i class="material-icons">home</i></a></li>
-                <li><a id="Char"><i class="material-icons">store</i></a></li>
-                <li><a id="Inv" onClick=""><i class="material-icons">shopping_cart</i></a></li>
-                <li><a id="log"><i class="material-icons">chat</i></a></li>
-            </ul>
+  <nav id="navBar">
+    <div class="nav-wrapper grey darken-3">
+      <ul id="nav-mobile" class="right">
+        <li><a id="home" onClick=""><i class="material-icons">home</i></a></li>
+        <li><a id="Char"><i class="material-icons">person_pin</i></a></li>
+        <li><a id="Inv" onClick=""><i class="material-icons">view_agenda</i></a></li>
+        <li><a id="Shop"><i class="material-icons">shopping_cart</i></a></li>
+      </ul>
 
+    </div>
+  </nav>
+  <div id="main-container">
+    <div id="characterSelect" class="row screen">
+      <form id="characterCreate">
+        Please enter you characters name:
+        <input id="characterName" type="text" required="true"> Select a race:
+        <select id="race" class="browser-default">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="1">Human: +7 INT, +5 CFT</option>
+          <option value="2">Orc: +10 Health, -2 INT</option>
+          <option value="3">Elf: +10 Archery, +1 INT, +1 CFT</option>
+          <option value="4">Forest Child: +20 INT, +2 Nature Magic</option>
+        </select>
+        <p>Note: This game adjusts to your choices throughout playing, thus your character shall develop as you play. However, your fate is not entirely in your hands!</p>
+        <div id="submit" class="btn col s12">Continue</div>
+      </form>
+
+    </div>
+
+    <!-- screens -->
+    <div id="character" class="row screen">
+      <div id="equiptment" class="col s8">
+
+      </div>
+      <div id="charStats" class="col s4">
+        <div class="col s6">
+          Character Name:
         </div>
-    </nav>
-    <div id="main-container">
-      <div id="characterSelect" class="row screen">
-<form id="characterCreate">
-Please enter you characters name:
-<input id="characterName" type="text" required>
-Select a race:
-<select id="race" class="browser-default" required>
-  <option value="" disabled selected>Choose your option</option>
-  <option value="1">Human: +7 INT, +5 CFT</option>
-  <option value="2">Orc: +10 Health, -2 INT</option>
-  <option value="3">Elf: +10 Archery, +1 INT, +1 CFT</option>
-  <option value="3">Forest Child: +20 INT, +2 Nature Magic</option>
-</select>
-<p>Note: This game adjusts to your choices throughout playing, thus your character shall develop as you play. However, your fate is not entirely in your hands!</p>
-<div id="submit" class="btn col s12">Continue</div>
-</form>
+        <div class="stat" id="charName"></div>
+        <div class="col s6">
+          Character Race:
+        </div>
+        <div class="stat" id="charRace"></div>
+        <div class="col s6">
+          Character Level:
+        </div>
+        <div class="stat" id="charLvl"></div>
+
+        <div class="col s12 center stat" id="charLvlProgress"></div>
+        <div class="col s6">
+          Character Armor Rating:
+        </div>
+        <div class="stat" id="charArmor"></div>
+        <div class="col s6">
+          Swords Skill Level:
+        </div>
+        <div class="stat" id="charSword"></div>
+
+      </div>
+    </div>
+    <div id="inventory" class="row screen">
+      <div id="gold" class="col s12"></div>
+
+      <div id="r1c1" class="invBlock col s1"></div>
+      <div id="r1c2" class="invBlock col s1"></div>
+      <div id="r1c3" class="invBlock col s1"></div>
+      <div id="r1c4" class="invBlock col s1"></div>
+      <div id="r1c5" class="invBlock col s1"></div>
+      <div id="r1c6" class="invBlock col s1"></div>
+      <div id="r1c7" class="invBlock col s1"></div>
+      <div id="r1c8" class="invBlock col s1"></div>
+      <div id="r1c9" class="invBlock col s1"></div>
+      <div id="r1c10" class="invBlock col s1"></div>
+      <div id="r1c11" class="invBlock col s1"></div>
+      <div id="r1c12" class="invBlock col s1"></div>
+
+      <div id="r2c1" class="invBlock col s1"></div>
+      <div id="r2c2" class="invBlock col s1"></div>
+      <div id="r2c3" class="invBlock col s1"></div>
+      <div id="r2c4" class="invBlock col s1"></div>
+      <div id="r2c5" class="invBlock col s1"></div>
+      <div id="r2c6" class="invBlock col s1"></div>
+      <div id="r2c7" class="invBlock col s1"></div>
+      <div id="r2c8" class="invBlock col s1"></div>
+      <div id="r2c9" class="invBlock col s1"></div>
+      <div id="r2c10" class="invBlock col s1"></div>
+      <div id="r2c11" class="invBlock col s1"></div>
+      <div id="r2c12" class="invBlock col s1"></div>
+
+      <div id="r3c1" class="invBlock col s1"></div>
+      <div id="r3c2" class="invBlock col s1"></div>
+      <div id="r3c3" class="invBlock col s1"></div>
+      <div id="r3c4" class="invBlock col s1"></div>
+      <div id="r3c5" class="invBlock col s1"></div>
+      <div id="r3c6" class="invBlock col s1"></div>
+      <div id="r3c7" class="invBlock col s1"></div>
+      <div id="r3c8" class="invBlock col s1"></div>
+      <div id="r3c9" class="invBlock col s1"></div>
+      <div id="r3c10" class="invBlock col s1"></div>
+      <div id="r3c11" class="invBlock col s1"></div>
+      <div id="r3c12" class="invBlock col s1"></div>
+
+      <div id="r4c1" class="invBlock col s1"></div>
+      <div id="r4c2" class="invBlock col s1"></div>
+      <div id="r4c3" class="invBlock col s1"></div>
+      <div id="r4c4" class="invBlock col s1"></div>
+      <div id="r4c5" class="invBlock col s1"></div>
+      <div id="r4c6" class="invBlock col s1"></div>
+      <div id="r4c7" class="invBlock col s1"></div>
+      <div id="r4c8" class="invBlock col s1"></div>
+      <div id="r4c9" class="invBlock col s1"></div>
+      <div id="r4c10" class="invBlock col s1"></div>
+      <div id="r4c11" class="invBlock col s1"></div>
+      <div id="r4c12" class="invBlock col s1"></div>
+
+      <div id="r5c1" class="invBlock col s1"></div>
+      <div id="r5c2" class="invBlock col s1"></div>
+      <div id="r5c3" class="invBlock col s1"></div>
+      <div id="r5c4" class="invBlock col s1"></div>
+      <div id="r5c5" class="invBlock col s1"></div>
+      <div id="r5c6" class="invBlock col s1"></div>
+      <div id="r5c7" class="invBlock col s1"></div>
+      <div id="r5c8" class="invBlock col s1"></div>
+      <div id="r5c9" class="invBlock col s1"></div>
+      <div id="r5c10" class="invBlock col s1"></div>
+      <div id="r5c11" class="invBlock col s1"></div>
+      <div id="r5c12" class="invBlock col s1"></div>
+    </div>
+
+    <div id="crafting" class="row screen"></div>
+
+    <div id="battle" class="row screen">
+      <div id="container" class="col s12">
+      <div id="log" class="col s3" style="overflow-y: auto">
+<ul id="logs" >
+</ul>
+      </div>
+      <div id="fightScene" class="col s3">
+          <div id="ehb" class="progress col s12">
+            <div id="enemyHealthBar" class="determinate"></div>
+        </div>
+        <div id="enemyName" class="col s6"></div>
+        <div id="enemyLvl" class="col s6"></div>
+        <div id="nextEnemy" class="btn col s12">Fight</div>
+        <div id="imgHolder" class="col s12 center"><img id="enemyImg" class="enemy center" src=""></div>
+      </div>
+      <div id="controller" class="col s6">
+<div id="unarmedA" class="btn col s12">Unarmed Attack</div>
+      </div>
+    </div>
+    </div>
+
+    <div id="crafting" class="row screen"></div>
+    <div id="dialogueBox">
+      <div id="DpersonPic"><img src="images/character/Icon.1_06.png" class="dialogueImg"></div>
+      <div id="DpersonName">Example Name Of Length that is hard to remember</div>
+      <div id="dialContent">test dialogue must actually be a long paragraph of text for the player to read and for mr.developer to see if his dialogue box works so he is just aimlessly typing away at this point.</div>
+    </div>
+  </div>
+  <footer id="footer" class="page-footer grey darken-3">
+    <div class="container">
+      <div class="row">
+        <ul id="navStats" class="left col s12 center">
+          <li>
+            <div class="progress">
+              <div id="healthBar" class="determinate"></div>
+            </div>
+          </li>
+          <li>
+            <div class="progress">
+              <div id="expBar" class="determinate"></div>
+            </div>
+          </li>
+          <li>
+            <div id="charlvlNav"></div>
+          </li>
+          <li>
+            <div id="charLvlProgressNav"></div>
+          </li>
+        </ul>
 
       </div>
 
-        <!-- screens -->
-        <div id="character" class="row screen">
-            <div id="equiptment" class="col s8">
-
-            </div>
-            <div id="charStats" class="col s4">
-              Character Name: <div id="charName"></div>
-              Character Race: <div id="charRace"></div>
-              Character Level: <div id="charLvl"></div>
-              <div id="charLvlProgress"></div>
-              Character Armor Rating: <div id="charArmor"></div>
-              Swords Skill Level: <div id="charSword"></div>
-
-            </div>
-        </div>
-        <div id="inventory" class="row screen">
-        </div>
-        <div id="crafting" class="row screen"></div>
-
-        <div id="dialogueBox">
-            <div id="DpersonPic"><img src="images/character/Icon.1_06.png" class="dialogueImg"></div>
-            <div id="DpersonName">Example Name Of Length that is hard to remember</div>
-            <div id="dialContent">test dialogue must actually be a long paragraph of text for the player to read and for mr.developer to see if his dialogue box works so he is just aimlessly typing away at this point.</div>
-        </div>
     </div>
-    <footer id="footer" class="page-footer grey darken-3">
-        <div class="container">
-            <div class="row">
-              <ul id="navStats" class="left col s12 center">
-                <li><div class="progress">
-      <div id="expBar" class="determinate" ></div>
-  </div></li>
-                  <li><div id="charlvlNav" ></div></li>
-                  <li><div id="charLvlProgressNav"></div></li>
-              </ul>
-
-            </div>
-
-        </div>
-    </footer>
+  </footer>
 </body>
-<script src="js/characterCreate.js"></script>
 <script src="js/charStats.js"></script>
-<script src="js/exp.js"></script>
+<script src="js/characterCreate.js"></script>
+<!-- <script src="js/exp.js"></script> -->
+<script src="js/combat.js"></script>
 <script>
-    var gameContainer = document.getElementById("main-container");
-    var screenH = window.innerHeight;
-    var screenW = window.innerWidth;
-    var navH = $("#navBar").height();
-    var footerH = $("#footer").height();
-    var gameH = screenH - (navH + footerH);
+  var gameContainer = document.getElementById("main-container");
+  var screenH = window.innerHeight;
+  var screenW = window.innerWidth;
+  var navH = $("#navBar").height();
+  var footerH = $("#footer").height();
+  var gameH = screenH - (navH + footerH);
 
-    gameContainer.style.height = gameH + "px";
+  gameContainer.style.height = gameH + "px";
+</script>
+<script>
+var crafting = document.getElementById('crafting');
+  $("#Char").click(function() {
+    if (battle.style.display == "block") {
+      character.style.display = "block";
+      inventory.style.display = "none";
+      battle.style.display = "none";
+      crafting.style.display = "none";
+    } else if (crafting.style.display == "block") {
+      character.style.display = "block";
+      crafting.style.display = "none";
+      battle.style.display = "none";
+      inventory.style.display = "none";
+    }
+    else if (battle.style.display == "block") {
+      inventory.style.display = "none";
+      character.style.display = "block";
+      crafting.style.display = "none";
+      battle.style.display = "none";
+    }
+  });
+  $("#Inv").click(function() {
+    if (character.style.display == "block") {
+      inventory.style.display = "block";
+      character.style.display = "none";
+      battle.style.display = "none";
+      crafting.style.display = "none";
+    } else if (crafting.style.display == "block") {
+      inventory.style.display = "block";
+      crafting.style.display = "none";
+      battle.style.display = "none";
+      character.style.display = "none";
+    }
+    else if (battle.style.display == "block") {
+      battle.style.display = "none";
+      inventory.style.display = "block";
+      crafting.style.display = "none";
+      character.style.display = "none";
+    }
+  });
+  $("#home").click(function() {
+    if (character.style.display == "block") {
+      inventory.style.display = "none";
+      character.style.display = "none";
+      battle.style.display = "block";
+      crafting.style.display = "none";
+    } else if (crafting.style.display == "block") {
+      inventory.style.display = "none";
+      crafting.style.display = "none";
+      character.style.display = "none";
+      battle.style.display = "block";
+    }
+    else if (inventory.style.display == "block") {
+      inventory.style.display = "none";
+      crafting.style.display = "none";
+      battle.style.display = "block";
+      character.style.display = "none";
+    }
+
+  });
+  $("#Shop").click(function() {
+    if (character.style.display == "block") {
+      inventory.style.display = "none";
+      character.style.display = "none";
+      battle.style.display = "none";
+      crafting.style.display = "block";
+    } else if (battle.style.display == "block") {
+      inventory.style.display = "none";
+      battle.style.display = "none";
+      character.style.display = "none";
+      crafting.style.display = "block";
+    }
+    else if (inventory.style.display == "block") {
+      inventory.style.display = "none";
+      crafting.style.display = "block";
+      battle.style.display = "none";
+      character.style.display = "none";
+    }
+  });
 </script>
 
 </html>
